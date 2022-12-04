@@ -1,0 +1,39 @@
+/* Особливості */
+
+.features {
+  padding-bottom: 0;
+
+  &__list--flex {
+    align-items: stretch;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: var(--secondary-text-color);
+
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    line-height: 1.71;
+  }
+
+  &__item {
+    max-width: 270px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__card {
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: var(--team-section-color);
+    border-radius: 4px;
+  }
+}

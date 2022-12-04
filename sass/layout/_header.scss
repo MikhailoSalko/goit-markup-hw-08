@@ -1,0 +1,11 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__logo {
+  margin-right: 93px;
+
+  &--end {
+    color: var(--logo-header-color);
+  }
+}
