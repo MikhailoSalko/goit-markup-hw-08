@@ -5,9 +5,17 @@
   text-transform: uppercase;
 
   color: var(--main-white-color);
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
-.socials__link--footer {
+.footer__socials {
   color: var(--main-white-color);
   background-color: rgba(255, 255, 255, 0.1);
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }

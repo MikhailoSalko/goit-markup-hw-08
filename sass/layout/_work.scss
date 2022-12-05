@@ -1,13 +1,11 @@
 /* Чим ми займаємось */
 
-.work__title {
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+.work {
+  display: none;
 
-  color: var(--secondary-text-color);
-
-  margin-bottom: 50px;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 
 .work__item {
@@ -36,6 +34,6 @@
   color: var(--main-white-color);
 }
 
-.socials__link--work {
+.work__socials {
   color: var(--customers-color);
 }
