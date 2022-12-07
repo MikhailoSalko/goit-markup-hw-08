@@ -3,15 +3,26 @@
 .portfolio-nav {
   margin-bottom: 50px;
 
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+
+  gap: 8px;
 }
 
-.portfolio-nav__item:not(:last-child) {
-  margin-right: 8px;
+.portfolio-nav__item:nth-child(n + 4) {
+  @media screen and (max-width: 767px) {
+    margin-top: 15px;
+  }
 }
 
 .portfolio-nav__btn {
-  padding: 6px 22px;
+  padding: 6px 23px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;

@@ -1,11 +1,25 @@
 .portfolio__list {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .portfolio__item {
-  width: 370px;
+  width: 100%;
+  max-width: 450px;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 1 * 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 2 * 30px) / 3);
+  }
 }
 
 .portfolio__link {

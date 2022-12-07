@@ -25,13 +25,12 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="./css/main.min.css" />
-    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   </head>
 
   <body>
     <!-- Хедер -->
     <header class="header">
-      <div class="header__flex container">
+      <div class="container header__flex">
         <a href="./index.html" class="logo header__logo"
           >Web<span class="header__logo--end">Studio</span></a
         >
@@ -41,7 +40,7 @@
               <a href="./index.html" class="site-nav__link link">Студія</a>
             </li>
             <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link link site-nav__link--current"
+              <a href="./portfolio.html" class="site-nav__link site-nav__link--current link"
                 >Портфоліо</a
               >
             </li>
@@ -68,6 +67,57 @@
             >
           </li>
         </ul>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu__icon--open" width="40" height="40" viewBox="0 0 20 20">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- mobile menu -->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="menu__icon--close" viewBox="0 0 18 18" width="40" height="40">
+            <use href="./images/icons.svg#icon-modal-close"></use>
+          </svg>
+        </button>
+
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="" class="menu-nav__link link">Студія</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="" class="menu-nav__link menu-nav__link--current link">Портфоліо</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="" class="menu-nav__link link">Контакти</a>
+          </li>
+        </ul>
+        <ul class="menu-contacts">
+          <li class="menu-contacts__item">
+            <a href="" class="menu-contacts__link menu-contacts__link--tel link"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="menu-contacts__item">
+            <a href="" class="menu-contacts__link menu-contacts__link--email link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="menu-socials">
+          <li class="menu-socials__item">
+            <a href="https://www.instagram.com" class="menu-contacts__link link">Instagram</a>
+          </li>
+          <li class="menu-socials__item">
+            <a href="https://twitter.com" class="menu-contacts__link link">Twitter</a>
+          </li>
+          <li class="menu-socials__item">
+            <a href="https://www.facebook.com" class="menu-contacts__link link">Facebook</a>
+          </li>
+          <li class="menu-socials__item">
+            <a href="https://www.linkedin.com" class="menu-contacts__link link">LinkedIn</a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -75,7 +125,7 @@
       <section class="section">
         <div class="container">
           <h1 class="visually-hidden">Портфоліо робіт</h1>
-          <ul class="portfolio-nav flex">
+          <ul class="portfolio-nav">
             <li class="portfolio-nav__item">
               <button type="button" class="portfolio-nav__btn">Усі</button>
             </li>
@@ -97,10 +147,20 @@
               <a class="portfolio__link link" href="./portfolio.html">
                 <div class="portfolio__thumb">
                   <img
-                    src="./images/portfolio1.jpg"
+                    srcset="
+                      ./images/portfolio/portfolio-tab/img1-354.jpg  354w,
+                      ./images/portfolio/portfolio-desc/img1-370.jpg 370w,
+                      ./images/portfolio/portfolio-mob/img1-450.jpg  450w,
+                      ./images/portfolio/portfolio-tab/img1-708.jpg  708w,
+                      ./images/portfolio/portfolio-desc/img1-740.jpg 740w,
+                      ./images/portfolio/portfolio-mob/img1-900.jpg  900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/portfolio-mob/img1-450.jpg 450w"
                     alt="монітор ноутбука"
-                    width="370"
+                    width="450"
                     height="294"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
@@ -120,10 +180,20 @@
               <a class="portfolio__link link" href="./portfolio.html">
                 <div class="portfolio__thumb">
                   <img
-                    src="./images/portfolio2.jpg"
+                    srcset="
+                      ./images/portfolio/portfolio-tab/img2-354.jpg  354w,
+                      ./images/portfolio/portfolio-desc/img2-370.jpg 370w,
+                      ./images/portfolio/portfolio-mob/img2-450.jpg  450w,
+                      ./images/portfolio/portfolio-tab/img2-708.jpg  708w,
+                      ./images/portfolio/portfolio-desc/img2-740.jpg 740w,
+                      ./images/portfolio/portfolio-mob/img2-900.jpg  900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/portfolio-mob/img2-450.jpg 450w"
                     alt="постер з баскетболітсами"
-                    width="370"
+                    width="450"
                     height="294"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
@@ -145,10 +215,20 @@
               <a class="portfolio__link link" href="./portfolio.html">
                 <div class="portfolio__thumb">
                   <img
-                    src="./images/portfolio3.jpg"
+                    srcset="
+                      ./images/portfolio/portfolio-tab/img3-354.jpg  354w,
+                      ./images/portfolio/portfolio-desc/img3-370.jpg 370w,
+                      ./images/portfolio/portfolio-mob/img3-450.jpg  450w,
+                      ./images/portfolio/portfolio-tab/img3-708.jpg  708w,
+                      ./images/portfolio/portfolio-desc/img3-740.jpg 740w,
+                      ./images/portfolio/portfolio-mob/img3-900.jpg  900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/portfolio-mob/img3-450.jpg 450w"
                     alt="логотип ресторану"
-                    width="370"
+                    width="450"
                     height="294"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
@@ -167,7 +247,22 @@
             <li class="portfolio__item">
               <a class="portfolio__link link" href="./portfolio.html">
                 <div class="portfolio__thumb">
-                  <img src="./images/portfolio4.jpg" alt="навушники" width="370" height="294" />
+                  <img
+                    srcset="
+                      ./images/portfolio/portfolio-tab/img4-354.jpg  354w,
+                      ./images/portfolio/portfolio-desc/img4-370.jpg 370w,
+                      ./images/portfolio/portfolio-mob/img4-450.jpg  450w,
+                      ./images/portfolio/portfolio-tab/img4-708.jpg  708w,
+                      ./images/portfolio/portfolio-desc/img4-740.jpg 740w,
+                      ./images/portfolio/portfolio-mob/img4-900.jpg  900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/portfolio-mob/img4-450.jpg 450w"
+                    alt="навушники"
+                    width="450"
+                    height="294"
+                    loading="lazy"
+                  />
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -186,10 +281,20 @@
               <a class="portfolio__link link" href="./portfolio.html">
                 <div class="portfolio__thumb">
                   <img
-                    src="./images/portfolio5.jpg"
+                    srcset="
+                      ./images/portfolio/portfolio-tab/img5-354.jpg  354w,
+                      ./images/portfolio/portfolio-desc/img5-370.jpg 370w,
+                      ./images/portfolio/portfolio-mob/img5-450.jpg  450w,
+                      ./images/portfolio/portfolio-tab/img5-708.jpg  708w,
+                      ./images/portfolio/portfolio-desc/img5-740.jpg 740w,
+                      ./images/portfolio/portfolio-mob/img5-900.jpg  900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/portfolio-mob/img5-450.jpg 450w"
                     alt="дві маленькі коробки"
-                    width="370"
+                    width="450"
                     height="294"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
@@ -209,10 +314,20 @@
               <a class="portfolio__link link" href="./portfolio.html">
                 <div class="portfolio__thumb">
                   <img
-                    src="./images/portfolio6.jpg"
+                    srcset="
+                      ./images/portfolio/portfolio-tab/img6-354.jpg  354w,
+                      ./images/portfolio/portfolio-desc/img6-370.jpg 370w,
+                      ./images/portfolio/portfolio-mob/img6-450.jpg  450w,
+                      ./images/portfolio/portfolio-tab/img6-708.jpg  708w,
+                      ./images/portfolio/portfolio-desc/img6-740.jpg 740w,
+                      ./images/portfolio/portfolio-mob/img6-900.jpg  900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/portfolio-mob/img6-450.jpg 450w"
                     alt="монітор комп'ютера"
-                    width="370"
+                    width="450"
                     height="294"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
@@ -233,10 +348,20 @@
               <a class="portfolio__link link" href="./portfolio.html">
                 <div class="portfolio__thumb">
                   <img
-                    src="./images/portfolio7.jpg"
+                    srcset="
+                      ./images/portfolio/portfolio-tab/img7-354.jpg  354w,
+                      ./images/portfolio/portfolio-desc/img7-370.jpg 370w,
+                      ./images/portfolio/portfolio-mob/img7-450.jpg  450w,
+                      ./images/portfolio/portfolio-tab/img7-708.jpg  708w,
+                      ./images/portfolio/portfolio-desc/img7-740.jpg 740w,
+                      ./images/portfolio/portfolio-mob/img7-900.jpg  900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/portfolio-mob/img7-450.jpg 450w"
                     alt="відкрита книга"
-                    width="370"
+                    width="450"
                     height="294"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
@@ -256,10 +381,20 @@
               <a class="portfolio__link link" href="./portfolio.html">
                 <div class="portfolio__thumb">
                   <img
-                    src="./images/portfolio8.jpg"
+                    srcset="
+                      ./images/portfolio/portfolio-tab/img8-354.jpg  354w,
+                      ./images/portfolio/portfolio-desc/img8-370.jpg 370w,
+                      ./images/portfolio/portfolio-mob/img8-450.jpg  450w,
+                      ./images/portfolio/portfolio-tab/img8-708.jpg  708w,
+                      ./images/portfolio/portfolio-desc/img8-740.jpg 740w,
+                      ./images/portfolio/portfolio-mob/img8-900.jpg  900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/portfolio-mob/img8-450.jpg 450w"
                     alt="логотип проекту"
-                    width="370"
+                    width="450"
                     height="294"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
@@ -279,10 +414,20 @@
               <a class="portfolio__link link" href="./portfolio.html">
                 <div class="portfolio__thumb">
                   <img
-                    src="./images/portfolio9.jpg"
+                    srcset="
+                      ./images/portfolio/portfolio-tab/img9-354.jpg  354w,
+                      ./images/portfolio/portfolio-desc/img9-370.jpg 370w,
+                      ./images/portfolio/portfolio-mob/img9-450.jpg  450w,
+                      ./images/portfolio/portfolio-tab/img9-708.jpg  708w,
+                      ./images/portfolio/portfolio-desc/img9-740.jpg 740w,
+                      ./images/portfolio/portfolio-mob/img9-900.jpg  900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/portfolio-mob/img9-450.jpg 450w"
                     alt="відкритий ноутбук"
-                    width="370"
+                    width="450"
                     height="294"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
@@ -410,5 +555,13 @@
         </form>
       </div>
     </footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

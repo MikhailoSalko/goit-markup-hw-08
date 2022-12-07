@@ -25,7 +25,6 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="./css/main.min.css" />
-    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   </head>
 
   <body>
@@ -64,6 +63,57 @@
               </svg>
               +38 096 111 11 11</a
             >
+          </li>
+        </ul>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu__icon--open" width="40" height="40" viewBox="0 0 20 20">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- mobile menu -->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="menu__icon--close" viewBox="0 0 18 18" width="40" height="40">
+            <use href="./images/icons.svg#icon-modal-close"></use>
+          </svg>
+        </button>
+
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="" class="menu-nav__link menu-nav__link--current link">Студія</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="" class="menu-nav__link link">Портфоліо</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="" class="menu-nav__link link">Контакти</a>
+          </li>
+        </ul>
+        <ul class="menu-contacts">
+          <li class="menu-contacts__item">
+            <a href="" class="menu-contacts__link menu-contacts__link--tel link"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="menu-contacts__item">
+            <a href="" class="menu-contacts__link menu-contacts__link--email link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="menu-socials">
+          <li class="menu-socials__item">
+            <a href="https://www.instagram.com" class="menu-contacts__link link">Instagram</a>
+          </li>
+          <li class="menu-socials__item">
+            <a href="https://twitter.com" class="menu-contacts__link link">Twitter</a>
+          </li>
+          <li class="menu-socials__item">
+            <a href="https://www.facebook.com" class="menu-contacts__link link">Facebook</a>
+          </li>
+          <li class="menu-socials__item">
+            <a href="https://www.linkedin.com" class="menu-contacts__link link">LinkedIn</a>
           </li>
         </ul>
       </div>
@@ -198,10 +248,12 @@
           <ul class="work__list flex">
             <li class="work__item">
               <img
-                src="./images/box1.jpg"
+                srcset="./images/work/img1-lg@1x.jpg 1x, ./images/work/img1-lg@2x.jpg 2x"
+                src="./images/work/img1-lg@1x.jpg"
                 alt="комп'ютер, телефон та планшет"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <div class="work__overlay">
                 <p class="work__text">Десктопні додатки</p>
@@ -209,10 +261,12 @@
             </li>
             <li class="work__item">
               <img
-                src="./images/box2.jpg"
+                srcset="./images/work/img2-lg@1x.jpg 1x, ./images/work/img2-lg@2x.jpg 2x"
+                src="./images/work/img2-lg@1x.jpg"
                 alt="комп'ютер, телефон та планшет"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <div class="work__overlay">
                 <p class="work__text">Мобільні додатки</p>
@@ -220,10 +274,12 @@
             </li>
             <li class="work__item">
               <img
-                src="./images/box3.jpg"
+                srcset="./images/work/img3-lg@1x.jpg 1x, ./images/work/img3-lg@2x.jpg 2x"
+                src="./images/work/img3-lg@1x.jpg"
                 alt="комп'ютер, телефон та планшет"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <div class="work__overlay">
                 <p class="work__text">Дизайнерські рішення</p>
@@ -240,7 +296,22 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./images/employee1.jpg" alt="молодий чоловік" width="270" height="260" />
+              <img
+                srcset="
+                  ./images/team/img1-270.jpg 270w,
+                  ./images/team/img1-354.jpg 354w,
+                  ./images/team/img1-450.jpg 450w,
+                  ./images/team/img1-540.jpg 540w,
+                  ./images/team/img1-708.jpg 708w,
+                  ./images/team/img1-900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/img1-450.jpg"
+                alt="молодий чоловік"
+                width="450"
+                height="460"
+                loading="lazy"
+              />
               <div class="team__card">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p lang="en" class="team__label">Product Designer</p>
@@ -297,7 +368,22 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/employee2.jpg" alt="молода жінка" width="270" height="260" />
+              <img
+                srcset="
+                  ./images/team/img2-270.jpg 270w,
+                  ./images/team/img2-354.jpg 354w,
+                  ./images/team/img2-450.jpg 450w,
+                  ./images/team/img2-540.jpg 540w,
+                  ./images/team/img2-708.jpg 708w,
+                  ./images/team/img2-900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/img2-450.jpg"
+                alt="молода жінка"
+                width="450"
+                height="460"
+                loading="lazy"
+              />
               <div class="team__card">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p lang="en" class="team__label">Frontend Developer</p>
@@ -354,7 +440,22 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/employee3.jpg" alt="молодий чоловік" width="270" height="260" />
+              <img
+                srcset="
+                  ./images/team/img3-270.jpg 270w,
+                  ./images/team/img3-354.jpg 354w,
+                  ./images/team/img3-450.jpg 450w,
+                  ./images/team/img3-540.jpg 540w,
+                  ./images/team/img3-708.jpg 708w,
+                  ./images/team/img3-900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/img3-450.jpg"
+                alt="молодий чоловік"
+                width="450"
+                height="460"
+                loading="lazy"
+              />
               <div class="team__card">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p lang="en" class="team__label">Marketing</p>
@@ -411,7 +512,22 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/employee4.jpg" alt="молодий чоловік" width="270" height="260" />
+              <img
+                srcset="
+                  ./images/team/img4-270.jpg 270w,
+                  ./images/team/img4-354.jpg 354w,
+                  ./images/team/img4-450.jpg 450w,
+                  ./images/team/img4-540.jpg 540w,
+                  ./images/team/img4-708.jpg 708w,
+                  ./images/team/img4-900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/img4-450.jpg"
+                alt="молодий чоловік"
+                width="450"
+                height="460"
+                loading="lazy"
+              />
               <div class="team__card">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p lang="en" class="team__label">UI Designer</p>
