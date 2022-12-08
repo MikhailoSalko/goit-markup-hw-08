@@ -1,7 +1,7 @@
 /* Герой */
 
 .hero {
-  padding: 200px 0;
+  padding: 118px 0;
   max-height: 600px;
   max-width: 1600px;
   margin: 0 auto;
@@ -38,6 +38,10 @@
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/hero/img-lg@2x.jpg');
     }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
   }
 
   &__title {
