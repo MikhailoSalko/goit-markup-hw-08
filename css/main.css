@@ -1179,15 +1179,21 @@ address {
           align-items: center;
   gap: 8px;
 }
+@media screen and (max-width: 767px) {
+  .portfolio-nav {
+    max-width: 326px;
+  }
+}
 @media screen and (min-width: 768px) {
   .portfolio-nav {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 350px) and (max-width: 767px) {
   .portfolio-nav__item:nth-child(n+4) {
     margin-top: 15px;
   }
@@ -1471,7 +1477,7 @@ address {
   color: var(--accent-color);
   max-width: 357px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 319px) {
   .menu-socials {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;

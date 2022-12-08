@@ -8,15 +8,20 @@
 
   align-items: center;
 
+  @media screen and (max-width: 767px) {
+    max-width: 326px;
+  }
+
   @media screen and (min-width: 768px) {
     justify-content: center;
+    width: 100%;
   }
 
   gap: 8px;
 }
 
 .portfolio-nav__item:nth-child(n + 4) {
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 350px) and (max-width: 767px) {
     margin-top: 15px;
   }
 }
