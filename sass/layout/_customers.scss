@@ -15,7 +15,7 @@
   width: 100%;
   height: 92px;
 
-  @media screen and(min-width: 480px) {
+  @media screen and(min-width: 320px) {
     width: calc((100% - 1 * 30px) / 2);
   }
 

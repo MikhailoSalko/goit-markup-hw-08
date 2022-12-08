@@ -1,7 +1,9 @@
 /* Підписка */
 
 .subscription__form {
-  margin: 0 auto;
+  @media screen and (max-width: 1199px) {
+    margin: 0 auto;
+  }
 
   @media screen and (min-width: 1200px) {
     margin-left: auto;
@@ -26,6 +28,7 @@
   @media screen and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   @media screen and (min-width: 1200px) {
@@ -37,8 +40,9 @@
 .subscription__label {
   width: 100%;
   max-width: 450px;
+
   @media screen and (max-width: 1199px) {
-    margin: 0 auto;
+    margin-bottom: 20px;
   }
 }
 
@@ -59,10 +63,6 @@
     color: var(--main-text-color);
   }
 
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 20px;
-  }
-
   @media screen and (min-width: 1200px) {
     width: 358px;
 
@@ -72,10 +72,6 @@
 
 .subscription__button {
   gap: 10px;
-
-  @media screen and (max-width: 1199px) {
-    margin: 0 auto;
-  }
 }
 
 .subscription__icon {

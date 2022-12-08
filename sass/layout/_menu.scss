@@ -33,7 +33,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
+  padding: 10% 5%;
   background-color: var(--main-white-color);
   z-index: 999;
 
@@ -42,6 +42,10 @@
 
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 480px) {
+    padding: 48px 40px;
+  }
 }
 
 .menu-container.is-open {
@@ -65,7 +69,7 @@
 
 .menu-nav__link {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 1.18;
   letter-spacing: 0.02em;
 
@@ -78,6 +82,10 @@
 
   &--current {
     color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 480px) {
+    font-size: 40px;
   }
 }
 
@@ -95,41 +103,76 @@
   letter-spacing: 0.02em;
 
   &--tel {
-    font-size: 34px;
+    font-size: 30px;
 
     color: var(--accent-color);
+
+    @media screen and (min-width: 480px) {
+      font-size: 34px;
+    }
   }
 
   &--email {
-    font-size: 24px;
+    font-size: 20px;
 
     color: var(--main-text-color);
+
+    @media screen and (min-width: 480px) {
+      font-size: 24px;
+    }
   }
 }
 
 .menu-socials {
+  position: relative;
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: stretch;
+  gap: 20px;
   color: var(--accent-color);
+
+  max-width: 357px;
+
+  @media screen and (max-width: 320px) {
+    flex-wrap: wrap;
+  }
+}
+
+.menu-socials__item {
+  position: relative;
 }
 
 .menu-socials__item:not(:last-child)::after {
   content: '';
-  display: inline-flex;
-  margin-left: 10px;
-  width: 0px;
+
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 1px;
   height: 22px;
   border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .menu-socials__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.22;
 
   letter-spacing: 0.02em;
 
   color: var(--accent-color);
+
+  @media screen and (min-width: 360px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 430px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+  }
 }
