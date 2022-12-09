@@ -308,9 +308,6 @@ address {
   fill: currentColor;
 }
 
-.modal__form {
-  max-width: 370px;
-}
 @media screen and (max-width: 1199px) {
   .modal__form {
     max-width: 370px;
