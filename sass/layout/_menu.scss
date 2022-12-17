@@ -33,7 +33,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 10% 5%;
+  padding: calc(10vmin);
   background-color: var(--main-white-color);
   z-index: 999;
 
@@ -69,7 +69,7 @@
 
 .menu-nav__link {
   font-weight: 500;
-  font-size: 35px;
+  font-size: calc(30px + 1vmin);
   line-height: 1.18;
   letter-spacing: 0.02em;
 
@@ -103,7 +103,7 @@
   letter-spacing: 0.02em;
 
   &--tel {
-    font-size: 30px;
+    font-size: calc(20px + 2vmin);
 
     color: var(--accent-color);
 
@@ -113,7 +113,7 @@
   }
 
   &--email {
-    font-size: 20px;
+    font-size: calc(15px + 2vmin);
 
     color: var(--main-text-color);
 
@@ -128,14 +128,11 @@
   display: flex;
   align-items: baseline;
   justify-content: stretch;
+  flex-wrap: wrap;
   gap: 20px;
   color: var(--accent-color);
 
   max-width: 357px;
-
-  @media screen and (max-width: 319px) {
-    flex-wrap: wrap;
-  }
 }
 
 .menu-socials__item {
@@ -157,20 +154,12 @@
 
 .menu-socials__link {
   font-weight: 500;
-  font-size: 12px;
+  font-size: calc(12px + 1vmin);
   line-height: 1.22;
 
   letter-spacing: 0.02em;
 
   color: var(--accent-color);
-
-  @media screen and (min-width: 360px) {
-    font-size: 14px;
-  }
-
-  @media screen and (min-width: 430px) {
-    font-size: 16px;
-  }
 
   @media screen and (min-width: 480px) {
     font-size: 18px;
